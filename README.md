@@ -11,7 +11,7 @@ jsbrowser.html starts and shows plain browser environment.
 
 jsamd case:
 
-app will print to the console: "moduleA called Hello" if moduleb is present and if not:
+app will print to the console: "moduleB called Hello" if moduleb is present and if not:
 
   define([
   'moduleA',

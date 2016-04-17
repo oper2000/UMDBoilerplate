@@ -10,7 +10,7 @@
     } else {
         // Browser globals init
         if (!root.moduleB) { //dependency not founded, using DUMMY impl
-        	root.moduleA = {hello: function(msg) {console.log('dummy call');}}
+        	root.moduleA = factory({hello: function(msg) {console.log('dummy call');}});
         }
         else {
         	root.moduleA = factory(root.moduleB);
@@ -21,7 +21,7 @@
         _privateMethod(msg)
     }; 
     function _privateMethod(msg) {
-    	console.log('moduleA called ' + msg);
+        moduleB.hello(msg)
     }; 
     return {
     	hello: publicHello	
